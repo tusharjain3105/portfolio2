@@ -5,25 +5,26 @@
   --body-color-dark: rgb(14, 14, 69);
   --body-color-light: rgb(191, 191, 232);
 }
-
 body {
+  &.dark {
+    --body-color: var(--body-color-dark);
+  }
+  &.light {
+    --body-color: var(--body-color-light);
+  }
   background: var(--body-color);
 }
-body.dark {
-  --body-color: var(--body-color-dark);
-}
-body.light {
-  --body-color: var(--body-color-light);
-}
 
-.flex, .align-center, .justify-spacebw {
+.flex {
   display: flex;
 }
 
 .justify-spacebw {
+  @extend .flex;
   justify-content: space-between;
 }
 
 .align-center {
+  @extend .flex;
   align-items: center;
-}/*# sourceMappingURL=App.css.map */
+}
