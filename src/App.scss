@@ -3,16 +3,18 @@
   margin: 0;
   box-sizing: border-box;
   --body-color-dark: rgb(14, 14, 69);
-  --body-color-light: rgb(191, 191, 232);
+  --body-color-light: rgb(229, 229, 240);
 }
 body {
   &.dark {
     --body-color: var(--body-color-dark);
+    color: white;
   }
   &.light {
     --body-color: var(--body-color-light);
   }
   background: var(--body-color);
+  padding: 1rem;
 }
 
 .flex {
@@ -27,4 +29,8 @@ body {
 .align-center {
   @extend .flex;
   align-items: center;
+}
+
+.title {
+  text-transform: uppercase;
 }

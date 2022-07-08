@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { getCurrentTheme, toggleTheme } from "../controllers/helpers";
 import { ThemeMode } from "../env";
-import DarkModeButton from "../widgets/DarkModeButton";
-import LightModeButton from "../widgets/LightModeButton";
+import DarkModeButton from "../components/DarkModeButton";
+import LightModeButton from "../components/LightModeButton";
+import Details from "./Details";
 
 const HomePage = () => {
   const [isDarkMode, setIsDarkMode] = useState(
@@ -17,7 +18,9 @@ const HomePage = () => {
     <>
       <header>
         <nav className="justify-spacebw">
-          <div className="left"></div>
+          <div className="left">
+            <h1 className="title">Tushar Jain</h1>
+          </div>
           <div className="right">
             <div className="switch-theme" onClick={_toggleDarkMode}>
               {isDarkMode ? <LightModeButton /> : <DarkModeButton />}
@@ -25,7 +28,9 @@ const HomePage = () => {
           </div>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <Details />
+      </main>
     </>
   );
 };

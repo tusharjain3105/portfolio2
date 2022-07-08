@@ -3,14 +3,16 @@
   margin: 0;
   box-sizing: border-box;
   --body-color-dark: rgb(14, 14, 69);
-  --body-color-light: rgb(191, 191, 232);
+  --body-color-light: rgb(229, 229, 240);
 }
 
 body {
   background: var(--body-color);
+  padding: 1rem;
 }
 body.dark {
   --body-color: var(--body-color-dark);
+  color: white;
 }
 body.light {
   --body-color: var(--body-color-light);
@@ -26,4 +28,8 @@ body.light {
 
 .align-center {
   align-items: center;
+}
+
+.title {
+  text-transform: uppercase;
 }/*# sourceMappingURL=App.css.map */
